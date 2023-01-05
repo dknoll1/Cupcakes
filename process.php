@@ -9,9 +9,20 @@
 </head>
 <body>
     <?php
-        if (isset($_POST['radio1'])) {
-            echo "<h1>You chose " . $_POST['radio1'] . "</h1>";
+        $name = $_POST['name'];
+        $cupcakes[] = $_POST['flavor'];
+        $totalPrice = 0.0;
+
+        echo 'Thank you, ' . $name . 'for your order!';
+
+        echo 'Order Summary';
+        foreach ($cupcakes as $cupcake){
+            echo $cupcake;
+            $totalPrice += 3.50;
         }
+        echo 'Order Total: '. $totalPrice;
+
+
     ?>
 </body>
 </html>
