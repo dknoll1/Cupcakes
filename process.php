@@ -9,8 +9,9 @@
 </head>
 <body>
     <?php
+
         $name = $_POST['name'];
-        $cupcakes[] = $_POST['flavor'];
+        $cupcakes = array($_POST['flavor']);
         $totalPrice = 0.0;
 
         echo 'Thank you, ' . $name . 'for your order!';
