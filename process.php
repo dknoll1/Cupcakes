@@ -14,9 +14,9 @@
         $cupcakes = $_POST['flavor'];
         $totalPrice = 0.0;
 
-        echo '<p>Thank you ' . $name . ' for your order!</p>';
+        echo '<p>Thank you, ' . $name . ', for your order!</p>';
 
-        echo '<p>Order Summary</p>';
+        echo '<p>Order Summary:</p>';
         echo '<ul>';
         foreach ($cupcakes as $cupcake){
             echo '<li>'. $cupcake . '</li>';
