@@ -11,17 +11,19 @@
     <?php
 
         $name = $_POST['name'];
-        $cupcakes = array($_POST['flavor']);
+        $cupcakes = $_POST['flavor'];
         $totalPrice = 0.0;
 
-        echo 'Thank you, ' . $name . 'for your order!';
+        echo '<p>Thank you ' . $name . ' for your order!</p>';
 
-        echo 'Order Summary';
+        echo '<p>Order Summary</p>';
+        echo '<ul>';
         foreach ($cupcakes as $cupcake){
-            echo $cupcake;
+            echo '<li>'. $cupcake . '</li>';
             $totalPrice += 3.50;
         }
-        echo 'Order Total: '. $totalPrice;
+        echo '</ul>';
+        echo '<p>Order Total: '. $totalPrice . '</p>';
 
 
     ?>
