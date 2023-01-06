@@ -1,10 +1,10 @@
-/*
+<!--
     Contributors: Thomas Loudon and Daniel Knoll
     Date: 01/05/2022
     URL: https://tloudon.greenriverdev.com.greenriverdev.com/328/Cupcakes/
     GitHub: https://github.com/dknoll1/Cupcakes
     Description: Web form for cupcake ordering.
-*/
+-->
 <!doctype html>
 <html lang="en">
 <head>
