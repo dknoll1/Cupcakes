@@ -1,4 +1,10 @@
-
+/*
+    Contributors: Thomas Loudon and Daniel Knoll
+    Date: 01/05/2022
+    URL: https://tloudon.greenriverdev.com.greenriverdev.com/328/Cupcakes/
+    GitHub: https://github.com/dknoll1/Cupcakes
+    Description: Web form for cupcake ordering.
+*/
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,7 +12,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pick a Color</title>
+    <title>Pick a Cupcake</title>
 </head>
 <body>
     <h1>Cupcake Fundraiser Form!</h1>
