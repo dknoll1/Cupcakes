@@ -17,26 +17,44 @@
 </head>
 <body>
     <?php
-
         //variable declarations
-        $name = $_POST['name'];
+        $isError = false;
+        $totalPrice = 0;
+
+        if(!empty($_POST['name'])) {
+            $name = $_POST['name'];
+        }else {
+            echo "<p>You didn't enter your name.</p>";
+            $isError = true;
+        }
         $cupcakes = $_POST['flavor'];
-        $totalPrice = 0.0;
-
-        //display name and Thank you message
-        echo '<p>Thank you, ' . $name . ', for your order!</p>';
-
-        //Order summary
-        echo '<p>Order Summary:</p>';
-        echo '<ul>';
-        foreach ($cupcakes as $cupcake){
-            echo '<li>'. $cupcake . '</li>';
+        // so I will total the price before the order list is displayed so they will only see their order if they
+        // did not make an error in selection
+        foreach($cupcakes as $cupcake) {
             $totalPrice += 3.50;
         }
-        echo '</ul>';
+        if($totalPrice == 0) {
+            echo "<p>You didn't select any cupcake.</p>";
+            $isError = true;
+        }
 
-        //Display total price
-        echo '<p>Order Total: '. $totalPrice . '</p>';
+        if(!$isError) {
+            //display name and Thank you message
+            echo '<p>Thank you, ' . $name . ', for your order!</p>';
+
+            //Order summary
+            echo '<p>Order Summary:</p>';
+            echo '<ul>';
+            foreach ($cupcakes as $cupcake){
+                echo '<li>'. $cupcake . '</li>';
+            }
+            echo '</ul>';
+
+            //Display total price
+            echo '<p>Order Total: '. $totalPrice . '</p>';
+        }else{
+            echo "Please go back <a href=index.php>here</a> to make a valid order.";
+        }
 
 
     ?>
